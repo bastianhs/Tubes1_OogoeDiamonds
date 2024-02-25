@@ -14,7 +14,7 @@ lorem.
 
 ## How to Run the Game Engine
 
-You only need to do the **Requirements** and **Set Up** section once. After thet, you can skip to **Run** section.
+You only need to do the **Requirements** and **Set Up** section once. After that, you can skip to **Run** section.
 
 ### Requirements
 
@@ -110,7 +110,7 @@ npm run start
 
 ## How to Run the Bots
 
-You only need to do the **Requirements** and **Set Up** section once. After thet, you can skip to **Run** section.
+You only need to do the **Requirements** and **Set Up** section once. After that, you can skip to **Run** section.
 
 ### Requirements
 
