@@ -102,9 +102,17 @@ You only need to do the **Requirements** and **Set Up** section once. After that
 
 If you have done the previous sections, you can skip to this step to run the game engine. Make sure that you are in the **tubes1-IF2211-game-engine-1.1.0** directory.
 
-```
-npm run start
-```
+1. Start the game engine
+
+   ```
+   npm run start
+   ```
+
+2. Open the following link on your browser
+
+   ```
+   http://localhost:8082/
+   ```
 
 ---
 
