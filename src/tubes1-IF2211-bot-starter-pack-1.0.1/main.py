@@ -10,7 +10,7 @@ from game.util import *
 from game.logic.base import BaseLogic
 
 # import test bots here
-from game.logic.babas import BabasLogic
+from game.logic.always_red import AlwaysRedLogic
 
 init()
 BASE_URL = "http://localhost:3000/api"
@@ -19,7 +19,7 @@ CONTROLLERS = {
     "Random": RandomLogic,
     
     # insert test bots here
-    "BabasBot": BabasLogic
+    "AlwaysRed": AlwaysRedLogic
 }
 
 ###############################################################################
