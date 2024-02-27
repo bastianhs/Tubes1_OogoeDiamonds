@@ -13,15 +13,17 @@ class RandomLogic(BaseLogic):
         self.current_direction = 0
 
     def next_move(self, board_bot: GameObject, board: Board):
+        self.goal_position = closestdiamonds(board_bot, board)
+        print(self.goal_position)
         props = board_bot.properties
         # Analyze new state
-        if props.diamonds == 5:
+        if props.diamonds > 0 and props.milliseconds_left < 10000 :
+            # Waktu mepet
+            self.goal_position = board_bot.properties.base
+        elif props.diamonds == 5:
             # Move to base
             base = board_bot.properties.base
             self.goal_position = base
-        else:
-            # Just roam around
-            self.goal_position = None
 
         current_position = board_bot.position
         if self.goal_position:
@@ -42,3 +44,20 @@ class RandomLogic(BaseLogic):
                     self.directions
                 )
         return delta_x, delta_y
+    
+def closestdiamonds(board_bot: GameObject, board: Board) -> Position :
+    jejak = Position
+    distance = 200
+    for i in range(len(board.diamonds)) :
+        x = abs(board_bot.position.x - board.diamonds[i].position.x)
+        y = abs(board_bot.position.y - board.diamonds[i].position.y)
+        ratio = (x+y) / board.diamonds[i].properties.points
+        if distance > ratio :
+            if not (board.diamonds[i].properties.points == 2 and board_bot.properties.diamonds == 4) : 
+                distance = ratio
+                jejak = board.diamonds[i].position
+            # print(board.diamonds[i].position)
+    return jejak
+
+        
+

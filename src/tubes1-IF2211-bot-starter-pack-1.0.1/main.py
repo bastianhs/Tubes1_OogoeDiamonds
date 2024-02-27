@@ -9,17 +9,11 @@ from game.logic.random import RandomLogic
 from game.util import *
 from game.logic.base import BaseLogic
 
-# import test bots here
-from game.logic.babas import BabasLogic
-
 init()
 BASE_URL = "http://localhost:3000/api"
 DEFAULT_BOARD_ID = 1
 CONTROLLERS = {
     "Random": RandomLogic,
-    
-    # insert test bots here
-    "BabasBot": BabasLogic
 }
 
 ###############################################################################
