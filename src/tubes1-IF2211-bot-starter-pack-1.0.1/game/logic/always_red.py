@@ -18,7 +18,7 @@ class AlwaysRedLogic(BaseLogic):
         red_diamonds: List[GameObject] = [diamond for diamond in board.diamonds if diamond.properties.points == 2]
         
         # Analyze new state
-        if props.diamonds == 4:
+        if props.diamonds >= 4:
             # Move to base
             base = board_bot.properties.base
             self.goal_position = base
