@@ -8,7 +8,7 @@ Diamonds is a minigame with an objective to hunt diamonds as many as you can.
 
 ## Greedy Algorithm Implementation
 
-lorem.
+The greedy algorithm that we choose is greedy by ratio. The calculation is the steps from bot to diamond divided by diamond point. The lowest ratio is choosen by the bot.
 
 ---
 
@@ -38,26 +38,29 @@ You only need to do the **Requirements** and **Set Up** section once. After that
    git clone https://github.com/bastianhs/Tubes1_OogoeDiamonds.git
    ```
 
-2. Go to the parent directory
+2. Download the game engine from https://github.com/haziqam/tubes1-IF2211-game-engine/releases/tag/v1.1.0
+   Then, put the game engine file (tubes1-IF2211-bot-starter-pack-1.0.1) in the Tubes1_OogoeDiamonds/src directory
+
+3. Go to the parent directory
 
    ```
    cd Tubes1_OogoeDiamonds
    ```
 
-3. Go to the game engine directory
+4. Go to the game engine directory
 
    ```
    cd src/tubes1-IF2211-game-engine-1.1.0
    ```
 
-4. Install dependencies with yarn  
+5. Install dependencies with yarn  
    (if root-workspace error log "husky - .git can't be found" arise, the program can still be run)
 
    ```
    yarn
    ```
 
-5. Set up default environment variable
+6. Set up default environment variable
 
    - For windows
 
@@ -72,7 +75,7 @@ You only need to do the **Requirements** and **Set Up** section once. After that
    ./scripts/copy-env.sh
    ```
 
-6. Set up local database with docker
+7. Set up local database with docker
 
    Open docker desktop, then run the following command:
 
@@ -93,7 +96,7 @@ You only need to do the **Requirements** and **Set Up** section once. After that
      ./scripts/setup-db-prisma.sh
      ```
 
-7. Build
+8. Build
    ```
    npm run build
    ```
