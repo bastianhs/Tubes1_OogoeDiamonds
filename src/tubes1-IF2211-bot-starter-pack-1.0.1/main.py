@@ -10,12 +10,16 @@ from game.util import *
 from game.logic.base import BaseLogic
 # import test bots here
 from game.logic.one_row_or_one_col import one_row_or_one_col
+from game.logic.always_red import AlwaysRedLogic
+from game.logic.haikal import RandomLogic
 
 init()
 BASE_URL = "http://localhost:3000/api"
 DEFAULT_BOARD_ID = 1
 CONTROLLERS = {
-    "one_row_or_one_col": one_row_or_one_col,
+    "agil": one_row_or_one_col,
+    "bastian" : AlwaysRedLogic,
+    "haikal": RandomLogic,
     
     # insert test bots here\
 }
@@ -207,7 +211,7 @@ while True:
 
     # Don't spam the board more than it allows!
     # sleep(move_delay * time_factor)
-    sleep(0.1)
+    sleep(1)
 
 
 ###############################################################################

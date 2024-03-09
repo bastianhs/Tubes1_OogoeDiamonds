@@ -9,7 +9,7 @@ from ..util import get_direction
 # python main.py --logic one_row_or_one_col --email=your_email@example.com --name=your_name --password=your_password --team etimo
 
 class one_row_or_one_col(BaseLogic):
-# Algoritma greedy yang memilih berdasarkan jarak terdekat
+# Algoritma greedy yang memilih berdasarkan jarak dan point
 # hanya diamond yang berada di satu baris atau satu kolom dengan bot yang akan diambil
 # prioritas diambil berdasarkan diamond yang memiliki point lebih besar
 # jika pada baris/kolom yang sama dengan bot terdapat teleport, maka diamond yang berada pada satu baris dengan teleport lainnya juga dihitung
@@ -38,7 +38,8 @@ class one_row_or_one_col(BaseLogic):
         
         list_of_diamonds_near_teleporter: List[GameObject] = []
         # Mendapatkan diamond yang satu baris dengan teleport lainnya
-        if (list_of_teleport[0].position.x == x_coordinat_of_bot or list_of_teleport[0].position.y == y_coordinat_of_bot) and (list_of_teleport[1].position.x == x_coordinat_of_bot or list_of_teleport[1].position.y == y_coordinat_of_bot) :
+        if ((list_of_teleport[0].position.x == x_coordinat_of_bot or list_of_teleport[0].position.y == y_coordinat_of_bot) and
+           (list_of_teleport[1].position.x == x_coordinat_of_bot or list_of_teleport[1].position.y == y_coordinat_of_bot)) :
             # jika kedua teleport berada pada kolom/baris yang sama dengan bot
             # ambil teleport terdekat yang akan jadi kandidat untuk didekati bot
             # teleport yang lain akan jadi patokan untuk pencarian diamond
@@ -130,9 +131,13 @@ class one_row_or_one_col(BaseLogic):
                     self.directions
                 )
 
-        # Menghindari invalid move (delta_x = 0 dan delta_y = 0)
-        if (delta_x == delta_y):
-            delta_y += 1
+        # Menghindari invalid move
+        if (delta_x == 0 and delta_y == 0):
+            delta_y = 1
+        elif (delta_x == 1 and delta_y == 1):
+            delta_y = 0
+        elif (delta_x == -1 and delta_y == -1):
+            delta_y = 0
             
         return delta_x, delta_y
 
