@@ -8,7 +8,7 @@ Diamonds is a minigame with an objective to hunt diamonds as many as you can.
 
 ## Greedy Algorithm Implementation
 
-The greedy algorithm that we choose is greedy by ratio. The calculation is the steps from bot to diamond divided by diamond point. The lowest ratio is chosen by the bot.
+The greedy algorithm that we choose is Greedy_by_Ratio. The calculation is the steps from bot to diamond divided by diamond point. The lowest ratio is chosen by the bot.
 
 ---
 
