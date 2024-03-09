@@ -40,7 +40,7 @@ You only need to do the **Requirements** and **Set Up** section once. After that
    ```
 
 2. Download the game engine from https://github.com/haziqam/tubes1-IF2211-game-engine/releases/tag/v1.1.0
-   Then, put the game engine file (tubes1-IF2211-bot-starter-pack-1.0.1) in the Tubes1_OogoeDiamonds/src directory
+   Then, put the game engine folder (tubes1-IF2211-game-engine-1.1.0) in the Tubes1_OogoeDiamonds/src directory
 
 3. Go to the parent directory
 
