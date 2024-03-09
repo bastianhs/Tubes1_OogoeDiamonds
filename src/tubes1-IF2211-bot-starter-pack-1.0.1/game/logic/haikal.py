@@ -29,8 +29,8 @@ class RandomLogic(BaseLogic):
             # Saat inventory sudah penuh, bergerak ke base
             base = board_bot.properties.base
             self.goal_position = base
-        elif props.diamonds >= 3 and props.milliseconds_left < 10000 :
-            # 10 detik terakhir, harus kembali ke base (jika sudah memiliki 3 atau lebih diamond)
+        elif props.diamonds >= 2 and props.milliseconds_left < 12000 :
+            # 10 detik terakhir, harus kembali ke base (jika sudah memiliki 2 atau lebih diamond)
             self.goal_position = board_bot.properties.base
         
         current_position = board_bot.position
