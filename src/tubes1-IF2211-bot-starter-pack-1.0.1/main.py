@@ -9,17 +9,17 @@ from game.logic.random import RandomLogic
 from game.util import *
 from game.logic.base import BaseLogic
 # import test bots here
-from game.logic.one_row_or_one_col import one_row_or_one_col
-from game.logic.always_red import AlwaysRedLogic
-from game.logic.haikal import RandomLogic
+from game.logic.Greedy_by_Point import Greedy_by_Point
+from game.logic.Greedy_by_Position import Greedy_by_Position
+from game.logic.Greedy_by_Ratio import Greedy_by_Ratio
 
 init()
 BASE_URL = "http://localhost:3000/api"
 DEFAULT_BOARD_ID = 1
 CONTROLLERS = {
-    "agil": one_row_or_one_col,
-    "bastian" : AlwaysRedLogic,
-    "haikal": RandomLogic,
+    "agil": Greedy_by_Position,
+    "bastian" : Greedy_by_Point,
+    "haikal": Greedy_by_Ratio,
     
     # insert test bots here\
 }

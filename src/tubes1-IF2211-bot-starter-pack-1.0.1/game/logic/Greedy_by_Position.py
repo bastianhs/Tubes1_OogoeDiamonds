@@ -8,7 +8,7 @@ from ..util import get_direction
 # Test Bot
 # python main.py --logic one_row_or_one_col --email=your_email@example.com --name=your_name --password=your_password --team etimo
 
-class one_row_or_one_col(BaseLogic):
+class Greedy_by_Position(BaseLogic):
 # Algoritma greedy yang memilih berdasarkan jarak dan point
 # hanya diamond yang berada di satu baris atau satu kolom dengan bot yang akan diambil
 # prioritas diambil berdasarkan diamond yang memiliki point lebih besar
